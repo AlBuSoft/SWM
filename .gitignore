@@ -1,0 +1,13 @@
+﻿################################################################################
+# Diese .gitignore-Datei wurde von Microsoft(R) Visual Studio automatisch erstellt.
+################################################################################
+
+# VisualStudio
+/.vs
+/Debug-x64
+/temp
+*.pdb
+*.exp
+
+# Batch
+*.bat
