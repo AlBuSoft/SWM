@@ -1,6 +1,6 @@
 /*
   Simple Window Module
-  Copyright (c) 2023 AlBuSoft (FürthORG) <support@fürth.org>
+  Copyright (c) 2023 AlBuSoft (FürthORG) <alexander@fürth.org>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -27,6 +27,9 @@ BEGIN_NAMESPACE
 
 typedef unsigned int Window;
 
+/*
+* \since This enumeration is available since v1.0.0.
+*/
 typedef enum
 {
 	WINDOW_OPENGL = SWM_BIT(0),
@@ -42,9 +45,37 @@ typedef enum
 /*
 * \since This function is available since v1.0.0.
 */
-SWM_API Window* InitWindow(const char* title, int x, int y, int width, int height, unsigned int flags);
+SWM_API Window InitWindow(const char* title, int x, int y, int width, int height, unsigned int flags);
+
+/*
+* \since This function is available since v1.0.0.
+*/
+SWM_API Window GetCurrentWindow();
+
+#if _WIN32
+/*
+* \since This function is available since v1.0.0.
+*/
+SWM_API void* GetWindowHandle(Window window);
+
+#endif
 
 typedef void* GLContext;
+
+/*
+* \since This function is available since v1.0.0.
+*/
+SWM_API GLContext CreateGLContext(Window window);
+
+/*
+* \since This function is available since v1.0.0.
+*/
+SWM_API GLContext GetCurrentGLContext(Window window);
+
+/*
+* \since This function is available since v1.0.0.
+*/
+SWM_API void SwapBuffers(Window window);
 
 END_NAMESPACE
 

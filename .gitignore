@@ -11,3 +11,6 @@
 
 # Batch
 *.bat
+/Release-x64/swmpng.lib
+/Release-x64/swmpng.dll
+/swmpng

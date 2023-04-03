@@ -162,6 +162,9 @@
     <ResourceCompile Include="TestApp.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\swmpng\swmpng.vcxproj">
+      <Project>{fd68e86a-76aa-4b78-a757-bbd856b84a36}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\swm\swm.vcxproj">
       <Project>{fcc866c7-14ba-4f95-affc-da49e4f7eff0}</Project>
     </ProjectReference>

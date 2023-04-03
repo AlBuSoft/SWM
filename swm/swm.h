@@ -23,3 +23,5 @@
 #pragma once
 
 #include "swm_video.h"
+#include "swm_event.h"
+#include "swm_version.h"
